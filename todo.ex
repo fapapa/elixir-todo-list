@@ -5,7 +5,7 @@ defmodule TodoList do
     MultiDict.add(todo_list, date, title)
   end
 
-  def entries(todo_list, date) do
-    MultiDict.get(todo_list, date)
+  def entries(todo_list, entry) do
+    MultiDict.get(todo_list, entry.date, entry)
   end
 end
